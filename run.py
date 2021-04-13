@@ -19,8 +19,12 @@ def success(name):
     summary = generate_summary(name,5)
     # dynamic HTML document
     html = """<html>
-    <head></head>
+    <head>
+        <title>Result | Nam Abhi pata nahi he</title>
+    </head>
     <body>
+        <a href="/">Home</a>
+    
         <h1>Original Text</h1>
         <p>{name}</p>
         
