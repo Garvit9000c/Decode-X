@@ -11,12 +11,11 @@ import networkx as nx
 def read_article(a):
     article = a.split(".")
     sentences = []
-
     for sentence in article:
         sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
     sentences.pop()
-
-    return sentences
+    n=len(sentences)
+    return sentences,n
 
 
 def sentence_similarity(sent1, sent2, stopwords=None):
@@ -65,7 +64,12 @@ def generate_summary(file_name, top_n=5):
     summarize_text = []
 
     # Step 1 - Read text anc split it
-    sentences = read_article(file_name)
+    sentences,n = read_article(file_name)
+    if n<top_n:
+    	if n==1:
+    		top_n=1
+    	else:
+    		top_n=int(n/2)
 
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
@@ -81,7 +85,10 @@ def generate_summary(file_name, top_n=5):
         summarize_text.append(" ".join(ranked_sentence[i][1]))
 
     # Step 5 - Offcourse, output the summarize text
-    s='Summary\n'
+    s='Summary<br/><br/>'
+    c=1
     for i in summarize_text:
-        s=s+i+'.\n'
+        w=str(c)+'.'+i+'.<br/><br/>'
+        s+=w
+        c+=1
     return s

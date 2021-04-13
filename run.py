@@ -16,7 +16,7 @@ def get_data():
 
 @app.route('/success/<name>')
 def success(name):
-    name=generate_summary(name,5)
+    name=generate_summary(name,3)
     # dynamic HTML document
     html = """<html>
     <head></head>
