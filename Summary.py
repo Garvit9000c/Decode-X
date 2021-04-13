@@ -85,7 +85,7 @@ def generate_summary(file_name, top_n=5):
         summarize_text.append(" ".join(ranked_sentence[i][1]))
 
     # Step 5 - Offcourse, output the summarize text
-    s='Summary<br/><br/>'
+    s=''
     c=1
     for i in summarize_text:
         w=str(c)+'.'+i+'.<br/><br/>'

@@ -16,12 +16,18 @@ def get_data():
 
 @app.route('/success/<name>')
 def success(name):
-    name=generate_summary(name,3)
+    summary = generate_summary(name,5)
     # dynamic HTML document
     html = """<html>
     <head></head>
-    <body><h1>{name}</h1></body>
-    </html>""".format(name=name)
+    <body>
+        <h1>Original Text</h1>
+        <p>{name}</p>
+        
+        <h1>Summarised Text</h1>
+        <p>{summary}</p>
+    </body>
+    </html>""".format(name=name, summary=summary)
 
     return html
 
