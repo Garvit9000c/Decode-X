@@ -15,7 +15,13 @@ def get_data():
 
 @app.route('/success/<name>')
 def success(name):
-    return "<xmp>" + str(name) + " </xmp> "
+    # dynamic HTML document
+    html = """<html>
+    <head></head>
+    <body><h1>{name}</h1></body>
+    </html>""".format(name=name)
+
+    return html
 
 
 if __name__ == '__main__' :
