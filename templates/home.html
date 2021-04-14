@@ -9,21 +9,27 @@
 
 <header>
     <h1>DECODE-X</h1>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+    </div>
 </header>
-<div class="topnav">
-  <a class="active" href="/">Home</a>
-  <div class="search-container">
+<main>
+    <h2 id="inputHead">Text Input:</h2>
+    <div class="search-container">
      <form action = "http://localhost:5000/" method = "post" enctype=multipart/form-data>
-      <input type="text" placeholder="Search" name="search">
-      <input type="file" name="img">
-      <label class="switch">
-          <input type="checkbox" name='mode'>
+
+     <label class="switch">
+          <input id="toggle-check" type="checkbox" name='mode'>
           <span class="slider round"></span>
       </label>
+         <textarea id="textSearch" class="text-search" rows="4" cols="50" placeholder="Search" name="search"></textarea>
+      <input id="imgSearch" class="photo-search" type="file" name="img">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
-</div>
+</main>
+
+<script type="text/javascript" src="static/main.js"></script>
 </body>
 </html>
 
