@@ -39,7 +39,7 @@ def success(name):
     # dynamic HTML document
     html = """<html>
     <head>
-        <title>Result | Nam Abhi pata nahi he</title>
+        <title>Result | DECODE-X</title>
     </head>
     <body>
         <a href="/">Home</a>
