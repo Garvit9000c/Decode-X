@@ -16,6 +16,7 @@ def get_data():
 
 @app.route('/success/<name>')
 def success(name):
+
     summary = generate_summary(name,3)
     # dynamic HTML document
     html = """<html>
