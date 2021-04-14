@@ -15,7 +15,11 @@
   <div class="search-container">
      <form action = "http://localhost:5000/" method = "post" enctype=multipart/form-data>
       <input type="text" placeholder="Search" name="search">
-      <input type="file" name="img">
+      <input type="file" name="img"><br><br>
+      <label class="switch">
+          <input type="checkbox" name='mode'>
+          <span class="slider round"></span>
+      </label>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
