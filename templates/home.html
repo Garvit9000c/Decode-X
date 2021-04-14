@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nam Abhi pata nahi he</title>
+    <title>DECODE-X</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
 
 <header>
-    <h1>Nam Abhi pata nahi he</h1>
+    <h1>DECODE-X</h1>
 </header>
 <div class="topnav">
   <a class="active" href="/">Home</a>
   <div class="search-container">
-     <form action = "http://localhost:5000/" method = "post">
+     <form action = "http://localhost:5000/" method = "post" enctype=multipart/form-data>
       <input type="text" placeholder="Search" name="search">
       <input type="file" name="img">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
 </div>
-
-<div class="head">
-  <h2> DemoAPP </h2>
-</div>
-
 </body>
 </html>
 
