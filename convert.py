@@ -1,7 +1,17 @@
 from PIL import Image
 from pytesseract import pytesseract
 
-def con(image_path):
-	img = Image.open(image_path)
+def sp(t):
+	s=""
+	for i in t:
+		if i .isalnum() or i.isspace() or i=='.':
+			s=s+i.lower()
+		else:
+			s=s+' ' 
+	return s
+	
+def con(img_):
+	img=Image.open(img_)
 	text = pytesseract.image_to_string(img)
-	return text[:-1])
+	return text
+
