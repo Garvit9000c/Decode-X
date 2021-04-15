@@ -3,14 +3,16 @@ from werkzeug.utils import secure_filename
 import os
 from Summary import *
 from convert import *
+
+
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/')
 def home():
@@ -20,20 +22,19 @@ def home():
 @app.route('/', methods=['POST', 'GET'])
 def get_data():
         if request.method == 'POST':
-                flag=False
-                flag2=request.form.get('type')
                 if not(request.form.get('mode')):
-                        user = Eng(sp(request.form['search']))
+                        text = English(Simplifier(request.form['search']))
                 else:
                         file_=request.files['img']
                         filename = secure_filename(file_.filename)
                         s=os.path.join(app.config['UPLOAD_FOLDER'], filename)
                         file_.save(s)
-                        user=Eng(sp(con(s)))
-                if flag2:
-                	return redirect(url_for('legal', name=user))
+                        text=English(Simplifier(Text_convertor(s)))
+                        
+                if request.form.get('type'):
+                	return redirect(url_for('legal', name=text))
                 else:
-                	return redirect(url_for('summary', name=user))
+                	return redirect(url_for('summary', name=text))
 
 
 @app.route('/summary/<name>')

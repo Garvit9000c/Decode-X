@@ -4,25 +4,29 @@ from googletrans import Translator
 translator = Translator()
 #path_to_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 #pytesseract.tesseract_cmd = path_to_tesseract
-def sp(t):
-	s=""
-	for i in t:
+
+
+def Simplifier(text):
+	string=""
+	for i in text:
 		if i .isalnum() or i.isspace() or i=='.':
-			s=s+i.lower()
+			string = string + i.lower()
 		else:
-			s=s+' ' 
-	return s
+			string = string + ' ' 
+	return string
 	
-def con(img_):
+	
+def Text_convertor(img_):
 	img=Image.open(img_)
-	text1 = pytesseract.image_to_string(img,lang='hin')
-	text2 = pytesseract.image_to_string(img)
-	if (len(text1.split())>len(text2.split())):
-		text=text1
+	Hindi = pytesseract.image_to_string(img,lang='hin')
+	English = pytesseract.image_to_string(img)
+	if (len(Hindi.split())>len(English.split())):
+		text=Hindi
 	else:
-		text=text2
+		text=English
 	return text
 
-def Eng(s):
-	st=translator.translate(s)
-	return st.text
+
+def English(string):
+	value=translator.translate(string)
+	return value.text
