@@ -21,6 +21,7 @@ def home():
 def get_data():
         if request.method == 'POST':
                 flag=False
+                flag2=request.form.get('type')
                 if not(request.form.get('mode')):
                         user = sp(request.form['search'])
                 else:
@@ -29,12 +30,14 @@ def get_data():
                         s=os.path.join(app.config['UPLOAD_FOLDER'], filename)
                         file_.save(s)
                         user=sp(con(s))
-                return redirect(url_for('success', name=user))
+                if flag2:
+                	return redirect(url_for('legal', name=user))
+                else:
+                	return redirect(url_for('summary', name=user))
 
 
-@app.route('/success/<name>')
-def success(name):
-
+@app.route('/summary/<name>')
+def summary(name):
     summary = generate_summary(name,5)
     # dynamic HTML document
     html = """<html>
@@ -53,7 +56,27 @@ def success(name):
     </html>""".format(name=name, summary=summary)
 
     return html
+    
+@app.route('/legal/<name>')
+def legal(name):
+    summary = name
+    # dynamic HTML document
+    html = """<html>
+    <head>
+        <title>Result | DECODE-X</title>
+    </head>
+    <body>
+        <a href="/">Home</a>
+    
+        <h1>Original Text</h1>
+        <p>{name}</p>
+        
+        <h1>Summarised Text</h1>
+        <p>{summary}</p>
+    </body>
+    </html>""".format(name=name, summary=summary)
 
+    return html
 
 if __name__ == '__main__' :
     app.run(debug=True)
