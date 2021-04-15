@@ -14,16 +14,20 @@
     </div>
 </header>
 <main>
-    <h2 id="inputHead">Text Input:</h2>
+    <h3 id="inputHead">Text Input</h3>
     <div class="search-container">
      <form action = "http://localhost:5000/" method = "post" enctype=multipart/form-data>
-
      <label class="switch">
           <input id="toggle-check" type="checkbox" name='mode'>
           <span class="slider round"></span>
-      </label>
+     </label>
          <textarea id="textSearch" class="text-search" rows="4" cols="50" placeholder="Search" name="search"></textarea>
       <input id="imgSearch" class="photo-search" type="file" name="img">
+      <label class="switch">
+          <input id="toggle-mode" type="checkbox" name='type'>
+          <span class="slider round"></span>
+     </label>
+     <h3 id="inputHead2">Summary Mode</h3>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
