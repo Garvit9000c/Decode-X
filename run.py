@@ -21,7 +21,7 @@ def home():
 def get_data():
         if request.method == 'POST':
                 flag=False
-                if flag:
+                if not(request.form.get('mode')):
                         user = sp(request.form['search'])
                 else:
                         file_=request.files['img']
