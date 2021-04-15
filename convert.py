@@ -15,7 +15,12 @@ def sp(t):
 	
 def con(img_):
 	img=Image.open(img_)
-	text = pytesseract.image_to_string(img)
+	text1 = pytesseract.image_to_string(img,lang='hin')
+	text2 = pytesseract.image_to_string(img)
+	if (len(text1.split())>len(text2.split())):
+		text=text1
+	else:
+		text=text2
 	return text
 
 def Eng(s):

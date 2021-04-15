@@ -29,7 +29,7 @@ def get_data():
                         filename = secure_filename(file_.filename)
                         s=os.path.join(app.config['UPLOAD_FOLDER'], filename)
                         file_.save(s)
-                        user=sp(con(s))
+                        user=Eng(sp(con(s)))
                 if flag2:
                 	return redirect(url_for('legal', name=user))
                 else:
