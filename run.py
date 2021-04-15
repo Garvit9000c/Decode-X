@@ -23,7 +23,7 @@ def get_data():
                 flag=False
                 flag2=request.form.get('type')
                 if not(request.form.get('mode')):
-                        user = sp(request.form['search'])
+                        user = Eng(sp(request.form['search']))
                 else:
                         file_=request.files['img']
                         filename = secure_filename(file_.filename)

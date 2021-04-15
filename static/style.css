@@ -47,7 +47,7 @@ main{
 }
 .search-container{
     margin: 30px 0;
-    height: 30vh;
+    height: 100%;
 }
 form{
     height: 100%;
