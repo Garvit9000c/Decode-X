@@ -1,4 +1,4 @@
-from flask import Flask, flash,render_template, request, redirect, url_for
+from flask import Flask,render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 import os
 from Summary import *
@@ -32,9 +32,11 @@ def get_data():
                         text=English(Simplifier(Text_convertor(s)))
                         
                 if request.form.get('type'):
-                	return redirect(url_for('legal', name=text))
+                    #return redirect(url_for('legal', name=text))
+                	return redirect('https://decode-x.herokuapp.com/legal/'+text)
                 else:
-                	return redirect(url_for('summary', name=text))
+                    #return redirect(url_for('summary', name=text))
+                	return redirect('https://decode-x.herokuapp.com/summary/'+text)
 
 
 @app.route('/summary/<name>')
