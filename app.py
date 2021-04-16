@@ -4,7 +4,7 @@ import os
 from Summary import *
 from convert import *
 
-
+#Doc
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 def allowed_file(filename):
