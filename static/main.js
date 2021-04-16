@@ -1,9 +1,10 @@
 const toggler = document.getElementById('toggle-check');
 const toggler2 = document.getElementById('toggle-mode');
-const tg = document.getElementById('alpha');
+const toggler3 = document.getElementById('toggle-lang');
 const heading = document.getElementById('inputHead');
 const heading2 = document.getElementById('inputHead2');
-const heading3 = document.getElementById("beta");
+const heading3 = document.getElementById('inputHead3');
+
 
 const textSearch = document.getElementById('textSearch');
 const imgSearch = document.getElementById('imgSearch');
@@ -30,12 +31,13 @@ toggler2.addEventListener("click", ()=>{
 
 });
 
-tg.addEventListener("click", ()=>{
-    if(tg.checked == true){
-        heading3.innerHTML = "Hindi Input";
+toggler3.addEventListener("click", ()=>{
+    if(toggler3.checked == true){
+        heading3.innerHTML = "Hindi";
     }else{
-        heading3.innerHTML = "English Input";
+        heading3.innerHTML = "English";
     }
 
 });
+
 
