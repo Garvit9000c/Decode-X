@@ -3,7 +3,7 @@ const toggler2 = document.getElementById('toggle-mode');
 const tg = document.getElementById('alpha');
 const heading = document.getElementById('inputHead');
 const heading2 = document.getElementById('inputHead2');
-const heading3 = document.getElementById('beta');
+const heading3 = document.getElementById("beta");
 
 const textSearch = document.getElementById('textSearch');
 const imgSearch = document.getElementById('imgSearch');
@@ -32,9 +32,9 @@ toggler2.addEventListener("click", ()=>{
 
 tg.addEventListener("click", ()=>{
     if(tg.checked == true){
-        heading3.innerHTML = "Hindi";
+        heading3.innerHTML = "Hindi Input";
     }else{
-        heading3.innerHTML = "English";
+        heading3.innerHTML = "English Input";
     }
 
 });
