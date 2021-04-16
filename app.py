@@ -34,7 +34,6 @@ def get_data():
                         text=Simplifier(text)
                         if flag:
                                 text=English(text)
-            
                 if request.form.get('type'):
                     return redirect(url_for('legal', name=text))
                 else:
