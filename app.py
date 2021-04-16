@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 import os
 from Summary import *
 from convert import *
-
+global text
 #Doc
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
@@ -21,6 +21,7 @@ def home():
 
 @app.route('/', methods=['POST', 'GET'])
 def get_data():
+        global text
         if request.method == 'POST':
                 flag=request.form.get('lang')
                 if not(request.form.get('mode')):
@@ -38,14 +39,15 @@ def get_data():
                                 text=English(text)
                         text=Simplifier(text)
                 if request.form.get('type'):
-                    return redirect(url_for('legal', name=text))
+                    return redirect(url_for('legal'))
                 else:
-                    return redirect(url_for('summary', name=text))
+                    return redirect(url_for('summary'))
 
 
-@app.route('/summary/<name>')
-def summary(name):
-    summary = generate_summary(name,5)
+@app.route('/summary')
+def summary():
+    global text
+    summary = generate_summary(text,5)
     # dynamic HTML document
     html = """<html>
     <head>
@@ -60,13 +62,14 @@ def summary(name):
         <h1>Summarised Text</h1>
         <p>{summary}</p>
     </body>
-    </html>""".format(name=name, summary=summary)
+    </html>""".format(name=text, summary=summary)
 
     return html
     
-@app.route('/legal/<name>')
-def legal(name):
-    summary = name
+@app.route('/legal')
+def legal():
+    global text
+    summary = text
     # dynamic HTML document
     html = """<html>
     <head>
@@ -81,7 +84,7 @@ def legal(name):
         <h1>Summarised Text</h1>
         <p>{summary}</p>
     </body>
-    </html>""".format(name=name, summary=summary)
+    </html>""".format(name=text, summary=summary)
 
     return html
 
