@@ -3,25 +3,20 @@ from werkzeug.utils import secure_filename
 import os
 from Summary import *
 from convert import *
-global text
+
 #Doc
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
 
-
 @app.route('/', methods=['POST', 'GET'])
 def get_data():
-        global text
         if request.method == 'POST':
                 flag=request.form.get('lang')
                 if not(request.form.get('mode')):
@@ -39,15 +34,14 @@ def get_data():
                                 text=English(text)
                         text=Simplifier(text)
                 if request.form.get('type'):
-                    return redirect(url_for('legal'))
+                    return redirect(url_for('legal', name=text))
                 else:
-                    return redirect(url_for('summary'))
+                    return redirect(url_for('summary', name=text))
 
 
-@app.route('/summary')
-def summary():
-    global text
-    summary = generate_summary(text,5)
+@app.route('/summary/<name>')
+def summary(name):
+    summary = generate_summary(name,5)
     # dynamic HTML document
     html = """<html>
     <head>
@@ -62,14 +56,13 @@ def summary():
         <h1>Summarised Text</h1>
         <p>{summary}</p>
     </body>
-    </html>""".format(name=text, summary=summary)
+    </html>""".format(name=name, summary=summary)
 
     return html
-    
-@app.route('/legal')
-def legal():
-    global text
-    summary = text
+
+@app.route('/legal/<name>')
+def legal(name):
+    summary = name
     # dynamic HTML document
     html = """<html>
     <head>
@@ -84,9 +77,9 @@ def legal():
         <h1>Summarised Text</h1>
         <p>{summary}</p>
     </body>
-    </html>""".format(name=text, summary=summary)
+    </html>""".format(name=name, summary=summary)
 
     return html
 
 if __name__ == '__main__' :
-    app.run(debug=True)
+app.run(debug=True)
