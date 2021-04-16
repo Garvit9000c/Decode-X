@@ -8,15 +8,6 @@ const heading3 = document.getElementById('beta');
 const textSearch = document.getElementById('textSearch');
 const imgSearch = document.getElementById('imgSearch');
 
-toggler3.addEventListener("click", ()=>{
-    if(toggler3.checked == true){
-        heading2.innerHTML = "Hindi";
-    }else{
-        heading2.innerHTML = "English";
-    }
-
-});
-
 toggler.addEventListener("click", ()=>{
     if(toggler.checked == true){
         heading.innerHTML = "Image Input";
@@ -35,6 +26,15 @@ toggler2.addEventListener("click", ()=>{
         heading2.innerHTML = "Legal Mode";
     }else{
         heading2.innerHTML = "Summary Mode";
+    }
+
+});
+
+toggler3.addEventListener("click", ()=>{
+    if(toggler3.checked == true){
+        heading3.innerHTML = "Hindi";
+    }else{
+        heading3.innerHTML = "English";
     }
 
 });
