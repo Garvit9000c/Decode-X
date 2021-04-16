@@ -19,10 +19,10 @@ def Simplifier(text):
 def Text_convertor(img_,flag):
 	img=Image.open(img_)
 	if (flag):
-		text=pytesseract.image_to_string(img,lang='hin')
+		text_=pytesseract.image_to_string(img,lang='hin')
 	else:
-		text=pytesseract.image_to_string(img)
-	return text
+		text_=pytesseract.image_to_string(img)
+	return text_
 
 
 def English(string):
