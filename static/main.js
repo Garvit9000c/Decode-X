@@ -10,7 +10,7 @@ const textSearch = document.getElementById('textSearch');
 const imgSearch = document.getElementById('imgSearch');
 
 toggler.addEventListener("click", ()=>{
-    if(toggler.checked == true){
+    if(toggler.checked){
         heading.innerHTML = "Image Input";
         textSearch.style.display = "none";
         imgSearch.style.display = "block";
@@ -23,7 +23,7 @@ toggler.addEventListener("click", ()=>{
 });
 
 toggler2.addEventListener("click", ()=>{
-    if(toggler2.checked == true){
+    if(toggler2.checked){
         heading2.innerHTML = "Legal Mode";
     }else{
         heading2.innerHTML = "Summary Mode";
@@ -32,7 +32,7 @@ toggler2.addEventListener("click", ()=>{
 });
 
 toggler3.addEventListener("click", ()=>{
-    if(toggler3.checked == true){
+    if(toggler3.checked){
         heading3.innerHTML = "Hindi";
     }else{
         heading3.innerHTML = "English";
