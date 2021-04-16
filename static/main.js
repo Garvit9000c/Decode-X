@@ -1,6 +1,6 @@
 const toggler = document.getElementById('toggle-check');
 const toggler2 = document.getElementById('toggle-mode');
-const toggler3 = document.getElementById('alpha');
+const tg = document.getElementById('alpha');
 const heading = document.getElementById('inputHead');
 const heading2 = document.getElementById('inputHead2');
 const heading3 = document.getElementById('beta');
@@ -30,8 +30,8 @@ toggler2.addEventListener("click", ()=>{
 
 });
 
-toggler3.addEventListener("click", ()=>{
-    if(toggler3.checked == true){
+tg.addEventListener("click", ()=>{
+    if(tg.checked == true){
         heading3.innerHTML = "Hindi";
     }else{
         heading3.innerHTML = "English";
