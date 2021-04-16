@@ -5,7 +5,7 @@ translator = Translator()
 #path_to_tesseract = r"C:\Program Files\Tesseract-OCR"
 #pytesseract.tesseract_cmd = path_to_tesseract
 
-
+#filtering 
 def Simplifier(text):
 	string=""
 	for i in text:
