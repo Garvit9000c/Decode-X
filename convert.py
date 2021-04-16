@@ -10,11 +10,6 @@ def Simplifier(text):
 	string=""
 	string=text.replace('%',' ')
 	string=text.replace('/',' ')
-	#for i in text:
-	#	if i .isalnum() or i.isspace() or i=='.':
-	#		string = string + i.lower()
-	#	else:
-	#		string = string + ' ' 
 	return string
 	
 	
