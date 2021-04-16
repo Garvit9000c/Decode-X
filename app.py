@@ -32,11 +32,9 @@ def get_data():
                         text=English(Simplifier(Text_convertor(s)))
                         
                 if request.form.get('type'):
-                    #return redirect(url_for('legal', name=text))
-                	return redirect('https://decode-x.herokuapp.com/legal/'+text)
+                    return redirect(url_for('legal', name=text))
                 else:
-                    #return redirect(url_for('summary', name=text))
-                	return redirect('https://decode-x.herokuapp.com/summary/'+text)
+                    return redirect(url_for('summary', name=text))
 
 
 @app.route('/summary/<name>')
