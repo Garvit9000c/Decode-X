@@ -20,10 +20,12 @@ toggler3.addEventListener("click", ()=>{
 toggler.addEventListener("click", ()=>{
     if(toggler.checked == true){
         heading.innerHTML = "Image Input";
+        heading3.innerHTML = "Hindi";
         textSearch.style.display = "none";
         imgSearch.style.display = "block";
     }else{
         heading.innerHTML = "Text Input";
+        heading3.innerHTML = "English";
         textSearch.style.display = "block";
         imgSearch.style.display = "none";
     }
