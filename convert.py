@@ -16,16 +16,13 @@ def Simplifier(text):
 	return string
 	
 	
-def Text_convertor(img_):
+def Text_convertor(img_,flag):
 	img=Image.open(img_)
-	#Hindi = pytesseract.image_to_string(img,lang='hin')
-	English = pytesseract.image_to_string(img)
-	
-	#if (len(Hindi.split())>len(English.split())):
-	#	text=Hindi
-	#else:
-	#	text=English
-	return English
+	if (flag):
+		text=pytesseract.image_to_string(img,lang='hin')
+	else:
+		text=pytesseract.image_to_string(img)
+	return text
 
 
 def English(string):

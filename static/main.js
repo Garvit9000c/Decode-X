@@ -1,7 +1,9 @@
 const toggler = document.getElementById('toggle-check');
 const toggler2 = document.getElementById('toggle-mode');
+const toggler3 = document.getElementById('toggle-lang');
 const heading = document.getElementById('inputHead');
 const heading2 = document.getElementById('inputHead2');
+const heading3 = document.getElementById('inputHead3');
 
 const textSearch = document.getElementById('textSearch');
 const imgSearch = document.getElementById('imgSearch');
@@ -24,6 +26,15 @@ toggler2.addEventListener("click", ()=>{
         heading2.innerHTML = "Legal Mode";
     }else{
         heading2.innerHTML = "Summary Mode";
+    }
+
+});
+
+toggler3.addEventListener("click", ()=>{
+    if(toggler3.checked == true){
+        heading3.innerHTML = "Hindi";
+    }else{
+        heading3.innerHTML = "English";
     }
 
 });
