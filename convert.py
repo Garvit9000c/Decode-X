@@ -9,7 +9,7 @@ translator = Translator()
 def Simplifier(text):
 	string=""
 	for i in text:
-		if i not in ['%','/']:
+		if i .isalnum() or i.isspace() or i=='.':
 			string = string + i.lower()
 		else:
 			string = string + ' ' 
