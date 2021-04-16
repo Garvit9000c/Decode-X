@@ -30,10 +30,7 @@ def get_data():
                         filename = secure_filename(file_.filename)
                         s=os.path.join(app.config['UPLOAD_FOLDER'], filename)
                         file_.save(s)
-                        text=Text_convertor(s,flag)
-                        if flag:
-                                text=English(text)
-                        text=Simplifier(text)
+                        text=English(Simplifier(Text_convertor(s,flag)))
                 if request.form.get('type'):
                     return redirect(url_for('legal', name=text))
                 else:
