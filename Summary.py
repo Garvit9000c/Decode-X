@@ -10,14 +10,13 @@ import networkx as nx
 
 def read_article(a):
     article = a.split(".")
+    if len(article)=0:
+        article=[a]
     sentences = []
     for sentence in article:
         sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
     sentences.pop()
     n=len(sentences)
-    if n==0:
-        sentence=[a]
-        n=1
     return sentences,n
 
 
