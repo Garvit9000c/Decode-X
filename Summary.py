@@ -15,6 +15,9 @@ def read_article(a):
         sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
     sentences.pop()
     n=len(sentences)
+    if n==0:
+        sentence=[a]
+        n=1
     return sentences,n
 
 
