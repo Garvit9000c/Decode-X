@@ -66,6 +66,7 @@ def generate_summary(file_name):
     # Step 1 - Read text anc split it
     sentences,n = read_article(file_name)
     top_n=int(n/2)
+    top_n=min(top_n,6)
 
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
