@@ -42,7 +42,7 @@ def get_data():
 
 @app.route('/summary/<name>')
 def summary(name):
-    summary = generate_summary(name,5)
+    summary = Format(generate_summary(name))
     # dynamic HTML document
     html = """<html>
     <head>
@@ -51,19 +51,23 @@ def summary(name):
     <body>
         <a href="/">Home</a>
     
-        <h1>Original Text</h1>
-        <p>{name}</p>
-        
         <h1>Summarised Text</h1>
         <p>{summary}</p>
+        
+        <h1>Original Text</h1>
+        <p>{name}</p>
     </body>
-    </html>""".format(name=name, summary=summary)
+    </html>""".format(summary=summary,name=name)
 
     return html
 
 @app.route('/legal/<name>')
 def legal(name):
-    summary = name
+    summary= generate_summary(name)
+    legal= generate_legal(summary)
+    per=(len(legal)/len(summary))*100
+    summary=Format(summary)
+    legal=Format(legal)
     # dynamic HTML document
     html = """<html>
     <head>
@@ -72,13 +76,20 @@ def legal(name):
     <body>
         <a href="/">Home</a>
     
-        <h1>Original Text</h1>
-        <p>{name}</p>
+        <h1>Legal</h1>
+        <p>{legal}</p>
+        
+        <h1>Percentage Risk</h1>
+        <p>{per}</p>
         
         <h1>Summarised Text</h1>
         <p>{summary}</p>
+        
+        <h1>Original Text</h1>
+        <p>{name}</p>
+        
     </body>
-    </html>""".format(name=name, summary=summary)
+    </html>""".format(legal=legal, summary=summary, name=name, per=per)
 
     return html
 

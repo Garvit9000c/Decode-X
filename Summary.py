@@ -58,18 +58,14 @@ def build_similarity_matrix(sentences, stop_words):
     return similarity_matrix
 
 
-def generate_summary(file_name, top_n=5):
+def generate_summary(file_name):
     nltk.download("stopwords")
     stop_words = stopwords.words('english')
     summarize_text = []
 
     # Step 1 - Read text anc split it
     sentences,n = read_article(file_name)
-    if n<top_n:
-    	if n==1:
-    		top_n=1
-    	else:
-    		top_n=int(n/2)
+    top_n=max(int(n/2),1)
 
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
@@ -83,12 +79,25 @@ def generate_summary(file_name, top_n=5):
 
     for i in range(top_n):
         summarize_text.append(" ".join(ranked_sentence[i][1]))
+    
+    return summarize_text
 
-    # Step 5 - Offcourse, output the summarize text
-    s=''
-    c=1
-    for i in summarize_text:
-        w=str(c)+'.'+i+'.<br/><br/>'
-        s+=w
-        c+=1
-    return s
+def generate_legal(Sentence_list):
+    Sentence_list_legal=[]
+    for i in Sentence_list:
+        if legal(i):
+            Sentence_list_legal+=[i]
+    return Sentence_list_legal
+
+   
+def Format(Sum):
+    string=''
+    count=1
+    for i in Sum:
+        w=str(count)+'.'+i+'.<br/><br/>'
+        string+=w
+        count+=1
+    return string
+    
+def legal(sentence):
+    return True
