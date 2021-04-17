@@ -58,18 +58,14 @@ def build_similarity_matrix(sentences, stop_words):
     return similarity_matrix
 
 
-def generate_summary(file_name, top_n=5):
+def generate_summary(file_name):
     nltk.download("stopwords")
     stop_words = stopwords.words('english')
     summarize_text = []
 
     # Step 1 - Read text anc split it
     sentences,n = read_article(file_name)
-    if n<top_n:
-    	if n==1:
-    		top_n=1
-    	else:
-    		top_n=int(n/2)
+    top_n=int(n/2)
 
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)

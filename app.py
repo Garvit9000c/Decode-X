@@ -42,7 +42,7 @@ def get_data():
 
 @app.route('/summary/<name>')
 def summary(name):
-    summary = generate_summary(name,5)
+    summary = generate_summary(name)
     # dynamic HTML document
     html = """<html>
     <head>
