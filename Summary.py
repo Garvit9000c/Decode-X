@@ -9,9 +9,9 @@ import networkx as nx
 
 
 def read_article(a):
+    if a[-1]!='.' :
+        a=a+'.' 
     article = a.split(".")
-    if len(article)=0:
-        article=[a]
     sentences = []
     for sentence in article:
         sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
