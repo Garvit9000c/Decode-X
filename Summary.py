@@ -8,8 +8,6 @@ import networkx as nx
 
 
 def read_article(a):
-    if a[-1]!='.' :
-        a=a+'.' 
     article = a.split(".")
     sentences = []
     for sentence in article:
