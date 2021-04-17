@@ -6,7 +6,7 @@ from nltk.cluster.util import cosine_distance
 import numpy as np
 import networkx as nx
 
-
+# bettteeeee mojjjj kardiiii
 
 def read_article(a):
     if a[-1]!='.' :
