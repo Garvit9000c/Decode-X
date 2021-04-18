@@ -5,9 +5,11 @@ from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
 import numpy as np
 import networkx as nx
-
+import math
 
 def read_article(a):
+    if a[-1]!='.':
+        a+='.'
     article = a.split(".")
     sentences = []
     for sentence in article:
@@ -64,7 +66,7 @@ def generate_summary(file_name):
 
     # Step 1 - Read text anc split it
     sentences,n = read_article(file_name)
-    top_n=max(int(n/2),1)
+    top_n=int(n/2)+1
 
     # Step 2 - Generate Similary Martix across sentences
     sentence_similarity_martix = build_similarity_matrix(sentences, stop_words)
@@ -78,7 +80,6 @@ def generate_summary(file_name):
 
     for i in range(top_n):
         summarize_text.append(" ".join(ranked_sentence[i][1]))
-    
     return summarize_text
 
 def generate_legal(Sentence_list):
