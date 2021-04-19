@@ -7,6 +7,7 @@ import numpy as np
 import networkx as nx
 import math
 
+
 def read_article(a):
     if a[-1]!='.':
         a+='.'
