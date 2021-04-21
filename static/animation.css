@@ -110,10 +110,20 @@
 /* Dynamic Class */
 .ocupEffect{
     opacity: 1;
-    transition: ease 4s;
+    transition: ease 2s;
 }
 
 .aCon1:hover{
     border-color: #00FF00;
     transition: ease 0s;
+}
+
+/* Icon Animation */
+.iconA{
+    transform: translateY(8px);
+    transition: ease 0.8s;
+}
+.iconA1{
+    transform: translateX(10px);
+    transition: ease 0.8s;
 }
