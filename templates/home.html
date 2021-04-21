@@ -12,6 +12,11 @@
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+    crossorigin="anonymous" />
+
     <!--Local Style-->
     <link rel="stylesheet" href="static/header.css">
     <link rel="stylesheet" href="static/style.css"/>
@@ -57,14 +62,15 @@
 
 
     <div class="row lanBody">
-        <div class="col-lg-6 con1">
+        <div class="col-lg-5 con1">
             <h2 id="typedTxt"></h2>
-            <p id = "con1P" class="pCon1">DECODE-X helps user to summaries text and documents to simpler language which is easy to read and understand.</p>
+            <p class="pCon1">DECODE-X helps user to summaries text and documents to simpler language which is easy to read and understand.</p>
 
-            <!-- Animated Button -->
-          <a href="" class="buttons" id="tryBtn">
+          <a class="aCon1">How it Works</a>
+          <!-- Animated Button -->
+          <a href="" class="buttons">
             <button class="blob-btn">
-              Try it Out
+              Try it Out <i class="fab fa-google-play tryI"></i>
               <span class="blob-btn__inner">
                 <span class="blob-btn__blobs">
                   <span class="blob-btn__blob"></span>
@@ -77,15 +83,22 @@
           </a>
 
         </div>
-        <div class="col-lg-6 con2">
+        <div class="col-lg-7 con2">
             CONTAINER 2
         </div>
     </div>
 
 
 </main>
-    <script type="text/javascript" src="static/animation.js"
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="static/animation.js"></script>
+    <script type="text/javascript" src="static/header.js"></script>
     <script type="text/javascript" src="static/main.js"></script>
+
+
 </body>
 </html>
 

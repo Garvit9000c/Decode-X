@@ -10,7 +10,7 @@ html{
 body {
   font-family: 'Josefin Sans', sans-serif;
   height: 150vh;
-  color: #333;
+  color: #444;
 }
 p {
   font-family: 'Averia Serif Libre', cursive;
@@ -23,15 +23,31 @@ p {
     padding: 15vh 5%;
 }
 .con1 h2{
-    font-size: 3rem;
+    font-size: 2.7rem;
     line-height: 1.2;
-    color: #444;
+    color: #333;
     margin: 1vh 0;
 }
 .con1 p{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 20px 0 40px;
   width: 75%;
+}
+
+.aCon1{
+  font-family: 'Averia Serif Libre', cursive;
+  border: 2px solid #333;
+  padding: 15px 40px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  background: #00FF00;
+  margin: 20px 0;
+}
+
+.tryI{
+    margin-left: 10px;
 }
 
 /* ...........Design for Toogle button.............. */

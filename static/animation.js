@@ -11,8 +11,9 @@ function typeWriter() {
 }
 
 function disBtn(){
-  document.getElementById('tryBtn').classList.add("ocupEffect");
-  document.getElementById('con1P').classList.add("ocupEffect");
+  $('.buttons').addClass("ocupEffect");
+  $('.pCon1').addClass("ocupEffect");
+  $('.aCon1').addClass("ocupEffect");
 }
 
 typeWriter();

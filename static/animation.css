@@ -1,7 +1,8 @@
-/* lanBody con1 p */
-.pCon1{
+/* lanBody con1 p & a */
+.pCon1, .aCon1{
     opacity: 0;
 }
+
 
 /* lanBody con1 Button */
 .buttons {
@@ -109,5 +110,10 @@
 /* Dynamic Class */
 .ocupEffect{
     opacity: 1;
-    transition: ease 2s;
+    transition: ease 4s;
+}
+
+.aCon1:hover{
+    border-color: #00FF00;
+    transition: ease 0s;
 }
