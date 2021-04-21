@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <!--Local Style-->
+    <link rel="stylesheet" href="static/animation.css">
+    <link rel="stylesheet" href="static/header.css">
     <link rel="stylesheet" href="static/style.css"/>
+
 
     <title>DECODE-X</title>
 
@@ -28,29 +31,56 @@
 </header>
 
 <main>
-    <h3 id="inputHead">Text Input</h3>
-    <div class="search-container">
-     <form action="" method = "post" enctype=multipart/form-data>
-     <label class="switch">
-          <input id="toggle-check" type="checkbox" name='mode'>
-          <span class="slider round"></span>
-     </label>
-      <textarea id="textSearch" class="text-search" rows="4" cols="50" placeholder="Search" name="search"></textarea>
-      <input id="imgSearch" class="photo-search" type="file" name="img">
-      <label class="switch">
-          <input id="toggle-lang" type="checkbox" name='lang'>
-          <span class="slider round"></span>
-     </label>
-     <h4 id="inputHead3">English</h4>
-     <label class="switch">
-          <input id="toggle-mode" type="checkbox" name='type'>
-          <span class="slider round"></span>
-     </label>
-     <h3 id="inputHead2">Summary Mode</h3>
+<!--    <h3 id="inputHead">Text Input</h3>-->
+<!--    <div class="search-container">-->
+<!--     <form action="" method = "post" enctype=multipart/form-data>-->
+<!--     <label class="switch">-->
+<!--          <input id="toggle-check" type="checkbox" name='mode'>-->
+<!--          <span class="slider round"></span>-->
+<!--     </label>-->
+<!--      <textarea id="textSearch" class="text-search" rows="4" cols="50" placeholder="Search" name="search"></textarea>-->
+<!--      <input id="imgSearch" class="photo-search" type="file" name="img">-->
+<!--      <label class="switch">-->
+<!--          <input id="toggle-lang" type="checkbox" name='lang'>-->
+<!--          <span class="slider round"></span>-->
+<!--     </label>-->
+<!--     <h4 id="inputHead3">English</h4>-->
+<!--     <label class="switch">-->
+<!--          <input id="toggle-mode" type="checkbox" name='type'>-->
+<!--          <span class="slider round"></span>-->
+<!--     </label>-->
+<!--     <h3 id="inputHead2">Summary Mode</h3>-->
 
-      <button type="submit">Genrate </button>
-    </form>
-  </div>
+<!--      <button type="submit">Genrate </button>-->
+<!--    </form>-->
+<!--  </div>-->
+
+
+    <div class="row lanBody">
+        <div class="col-lg-6 con1">
+            <h2>Get Your Documents Summaries for better Understanding.</h2>
+            <p>DECODE-X helps user to summaries text and documents to simpler language which is easy to read and understand.</p>
+
+            <!-- Animated Button -->
+          <a href="" class="buttons" id="lernBtn">
+            <button class="blob-btn">
+              Try it Out
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
+          </a>
+
+        </div>
+        <div class="col-lg-6 con2">
+            CONTAINER 2
+        </div>
+    </div>
 
 
 </main>

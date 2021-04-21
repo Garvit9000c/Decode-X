@@ -1,76 +1,40 @@
+/* Default Code */
 * {
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
-
+html{
+    overflow-x: hidden;
+}
 body {
   font-family: 'Josefin Sans', sans-serif;
   height: 150vh;
   color: #333;
 }
-
-/*Header Code*/
-header{
-  padding: 10px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background: #fff;
-}
-header h1{
-  padding-top: 15px;
-}
-.navBtn{
-  background-color: #00FF00;
-  box-shadow: 0 8px 5px -3px #00FF00;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 17px;
-  padding: 5px 30px 0;
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-.navBtn a{
+p {
   font-family: 'Averia Serif Libre', cursive;
-  color: #666;
-  text-decoration: none;
-}
-.navBtn:hover{
-  box-shadow: 0px 0px 13px 3px #00FF00;
+  color: rgb(152, 151, 151);
+  line-height: 1.5;
 }
 
+/* BODY Code */
+.lanBody{
+    padding: 15vh 5%;
+}
+.con1 h2{
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #444;
+    margin: 1vh 0;
+}
+.con1 p{
+  font-size: 1.3rem;
+  padding: 20px 0 40px;
+  width: 75%;
+}
 
-/*Main Code*/
-main{
-    padding: 10vh 0;
-    text-align: center;
-}
-.search-container{
-    margin: 30px 0;
-    height: 100%;
-}
-form{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.text-search{
-    padding: 10px 5px;
-    resize: none;
-}
-.photo-search{
-    display: none;
-}
 /* ...........Design for Toogle button.............. */
-
-
 .switch {
   position: relative;
   display: inline-block;
