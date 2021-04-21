@@ -1,8 +1,14 @@
+/* lanBody con1 p */
+.pCon1{
+    opacity: 0;
+}
+
 /* lanBody con1 Button */
 .buttons {
   margin-top: 50px;
   border-radius: 15px;
   font-family: 'Averia Serif Libre', cursive;
+  opacity: 0;
 }
 .blob-btn {
   z-index: 1;
@@ -97,4 +103,11 @@
 }
 .blob-btn:hover .blob-btn__blob {
   transform: translateZ(0) scale(1.7);
+}
+
+
+/* Dynamic Class */
+.ocupEffect{
+    opacity: 1;
+    transition: ease 2s;
 }
