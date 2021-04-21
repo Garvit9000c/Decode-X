@@ -1,3 +1,16 @@
+//Loader Scripting
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
+$(window).on("load",function(){
+    $(".loader").slideUp("slow");
+    $("html").css("overflow-y", "scroll");
+    typeWriter();
+    setTimeout(disBtn, (speed * txt.length)+100 );
+});
+
+//TypeWrite Animation script
 var i = 0;
 var txt = 'Get Your Documents Summaries for better Understanding.'; /* The text */
 var speed = 30; /* The speed/duration of the effect in milliseconds */
@@ -16,9 +29,6 @@ function disBtn(){
   $('.pCon1').addClass("ocupEffect");
   $('.aCon1').addClass("ocupEffect");
 }
-
-typeWriter();
-setTimeout(disBtn, (speed * txt.length)+100 );
 
 //Icon Animation
 $('.aCon1').hover( () =>{

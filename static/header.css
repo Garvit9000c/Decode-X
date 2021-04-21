@@ -11,8 +11,7 @@ header{
 }
 .navBtn{
   background-color: #00FF00;
-
-  border: 1px solid #333;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   cursor: pointer;
   font-size: 17px;
@@ -21,13 +20,13 @@ header{
   display: flex;
   align-items: center;
 }
+.navBtn:hover{
+    transform: scale(1.1);
+}
 .navBtn a{
   font-family: 'Averia Serif Libre', cursive;
   color: #666;
   text-decoration: none;
   font-weight: bold;
-}
-.navBtn:hover{
-  box-shadow: 0px 0px 13px 3px #00FF00;
 }
 

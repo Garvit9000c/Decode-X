@@ -1,43 +1,40 @@
-const toggler = document.getElementById('toggle-check');
-const toggler2 = document.getElementById('toggle-mode');
-const toggler3 = document.getElementById('toggle-lang');
-const heading = document.getElementById('inputHead');
-const heading2 = document.getElementById('inputHead2');
-const heading3 = document.getElementById('inputHead3');
+const inputCheck = $(".inputCheck");
+const langCheck = $(".langCheck");
+const modeCheck = $(".modeCheck");
 
+const textSearch = $(".textSearch");
+const imgSearch = $(".imageSearch");
 
-const textSearch = document.getElementById('textSearch');
-const imgSearch = document.getElementById('imgSearch');
+const optionHead1 = $(".optionHead1");
+const optionHead2 = $(".optionHead2");
+const optionHead3 = $(".optionHead3");
 
-toggler.addEventListener("click", ()=>{
-    if(toggler.checked){
-        heading.innerHTML = "Image Input";
-        textSearch.style.display = "none";
-        imgSearch.style.display = "block";
+inputCheck.click(()=>{
+    if(inputCheck.is(":checked")){
+        textSearch.css('display', 'none');
+        imgSearch.css('display', 'block');
+
+        optionHead1.html('Image');
     }else{
-        heading.innerHTML = "Text Input";
-        textSearch.style.display = "block";
-        imgSearch.style.display = "none";
-    }
+        textSearch.css('display', 'block');
+        imgSearch.css('display', 'none');
 
+        optionHead1.html('Text');
+    }
 });
 
-toggler2.addEventListener("click", ()=>{
-    if(toggler2.checked){
-        heading2.innerHTML = "Legal Mode";
+langCheck.click(()=>{
+    if(langCheck.is(":checked")){
+        optionHead2.html('Hindi');
     }else{
-        heading2.innerHTML = "Summary Mode";
+        optionHead2.html('English');
     }
-
 });
 
-toggler3.addEventListener("click", ()=>{
-    if(toggler3.checked){
-        heading3.innerHTML = "Hindi";
+modeCheck.click(()=>{
+    if(modeCheck.is(":checked")){
+        optionHead3.html('Legal');
     }else{
-        heading3.innerHTML = "English";
+        optionHead3.html('Summary');
     }
-
 });
-
-

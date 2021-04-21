@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="static/header.css">
     <link rel="stylesheet" href="static/style.css"/>
     <link rel="stylesheet" href="static/animation.css">
+    <link rel="stylesheet" href="static/default.css">
 
 
     <title>DECODE-X</title>
@@ -28,6 +29,13 @@
 </head>
 <body>
 
+<!--Loader-->
+<section class="loader">
+    <div class="spiner"></div>
+    <p>Loading...</p>
+</section>
+
+<!--Header with navBar-->
 <header>
     <h1>DECODE-X</h1>
     <div class="navBtn">
@@ -60,8 +68,10 @@
 <!--    </form>-->
 <!--  </div>-->
 
-
+<!--landing BOdy-->
     <div class="row lanBody">
+
+<!--    Text Section-->
         <div class="col-lg-5 con1">
             <h2 id="typedTxt"></h2>
             <p class="pCon1">DECODE-X helps user to summaries text and documents to simpler language which is easy to read and understand.</p>
@@ -83,8 +93,65 @@
           </a>
 
         </div>
+
+<!--     Form Section-->
         <div id="formContainer" class="col-lg-7 con2">
-            CONTAINER 2
+            <form action="" method = "post" enctype=multipart/form-data>
+                <h3 class="con2H3">Provide Input Here</h3>
+
+<!--            First Input Field-->
+                <div class="inputTypeCon">
+                    <div class="headSwitch">
+                        <h4 class="formInputHead">Choose Input Type:</h4>
+                        <div class="switchOption">
+                            <label class="switch">
+                              <input class="inputCheck" type="checkbox" name='mode'>
+                              <span class="slider round"></span>
+                            </label>
+                            <h5 class="optionHead1">Text</h5>
+                        </div>
+                    </div>
+                    <div class="inputContainer">
+                        <textarea class="textSearch" rows="4" cols="50" placeholder="Search" name="search"></textarea>
+                        <div class="imageSearch">
+                          <input type="file" id="file" class="file">
+                          <label for="file">Select file</label>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!--Second Input Field-->
+                <div class="inputTypeCon">
+                    <div class="headSwitch">
+                        <h4 class="formInputHead">Choose Language:</h4>
+                        <div class="switchOption">
+                            <label class="switch">
+                              <input class="langCheck" type="checkbox" name='lang'>
+                              <span class="slider round"></span>
+                            </label>
+                            <h5 class="optionHead2">English</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!--Third Input Field-->
+                <div class="inputTypeCon">
+                    <div class="headSwitch">
+                        <h4 class="formInputHead">Choose Mode:</h4>
+                        <div class="switchOption">
+                            <label class="switch">
+                              <input class="modeCheck" type="checkbox" name='type'>
+                              <span class="slider round"></span>
+                            </label>
+                            <h5 class="optionHead3">Summary</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="formBtn" type="submit">Generate </button>
+            </form>
         </div>
     </div>
 
@@ -97,7 +164,7 @@
     <script type="text/javascript" src="static/animation.js"></script>
     <script type="text/javascript" src="static/header.js"></script>
     <script type="text/javascript" src="static/main.js"></script>
-
+    <script type="text/javascript" src="static/loader.js"></script>
 
 </body>
 </html>
