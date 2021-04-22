@@ -40,10 +40,10 @@
         </header>
         
         <h1>Summarised Text</h1>
-        <p>{{summary}}</p>
+        <p>{% autoescape false %}{{summary}}{% endautoescape %}</p>
             
         <h1>Original Text</h1>
-        <p>{{name}}</p>
+        <p>{% autoescape false %}{{name}}{% endautoescape %}</p>
 
 
         <!-- JQuery CDN -->
