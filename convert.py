@@ -2,8 +2,8 @@ from PIL import Image
 from pytesseract import pytesseract
 from googletrans import Translator
 translator = Translator()
-#path_to_tesseract = r"C:\Program Files\Tesseract-OCR"
-#pytesseract.tesseract_cmd = path_to_tesseract
+path_to_tesseract = r"C:\Program Files\Tesseract-OCR"
+pytesseract.tesseract_cmd = path_to_tesseract
 
 #filtering 
 def Simplifier(text):

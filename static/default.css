@@ -1,3 +1,26 @@
+/* Default Code */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 150vh;
+    color: #444;
+}
+
+
+p {
+    font-family: 'Averia Serif Libre', cursive;
+    color: rgb(152, 151, 151);
+    line-height: 1.5;
+}
+
 /* Styling of the Loader */
 .loader {
   position: absolute;
@@ -86,6 +109,7 @@
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  box-shadow: hsla(210, 40%, 52%, .4) 1px 1px 10px;
 }
 
 .slider:before {
@@ -105,7 +129,7 @@ input:checked + .slider {
 }
 
 input:focus +  .slider {
-  box-shadow: 0 0 1px #00FF00;
+  box-shadow: hsla(210, 40%, 52%, .4) 1px 1px 10px;
 }
 
 input:checked + .slider:before {

@@ -44,19 +44,44 @@ def get_data():
 def summary(name):
     summary = Format(generate_summary(name))
     # dynamic HTML document
-    html = """<html>
-    <head>
-        <title>Result | DECODE-X</title>
-    </head>
-    <body>
-        <a href="/">Home</a>
-    
-        <h1>Summarised Text</h1>
-        <p>{summary}</p>
+    html = """
+    <html>
+        <head>
+            <!--Meta Declaration-->
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <h1>Original Text</h1>
-        <p>{name}</p>
-    </body>
+            <!--Google Fonts-->
+            <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Balsamiq+Sans:wght@700&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        
+            <!--Bootstrap CDN-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        
+            <!-- Font Awesome CDN -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+            crossorigin="anonymous" />
+        
+            <link rel="stylesheet" href="static/header.css">
+            <link rel="stylesheet" href="static/summaryStyle.css">
+        
+            <title>Result | DECODE-X</title>
+        </head>
+        <body>
+            <header>
+                <h1>DECODE-X</h1>
+                <div class="navBtn">
+                  <a href="/">Home</a>
+                </div>
+            </header>
+        
+            <h1>Summarised Text</h1>
+            <p>{summary}</p>
+            
+            <h1>Original Text</h1>
+            <p>{name}</p>
+        </body>
     </html>""".format(summary=summary,name=name)
 
     return html

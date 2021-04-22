@@ -4,7 +4,7 @@ header{
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: -1px;
+  top: -10px;
   z-index: 5;
   background: #fff;
   transition: background-color 1s;
@@ -19,6 +19,7 @@ header{
   height: 30px;
   display: flex;
   align-items: center;
+  transition: ease 0.7s;
 }
 .navBtn:hover{
     transform: scale(1.1);
