@@ -1,15 +1,3 @@
-//Loader Scripting
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
-
-$(window).on("load",function(){
-    $(".loader").slideUp("slow");
-    $("html").css("overflow-y", "scroll");
-    typeWriter();
-    setTimeout(disBtn, (speed * txt.length)+100 );
-});
-
 //TypeWrite Animation script
 var i = 0;
 var txt = 'Get Your Documents Summaries for better Understanding.'; /* The text */

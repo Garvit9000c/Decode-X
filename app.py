@@ -45,6 +45,8 @@ def get_data():
 @app.route('/summary/<name>')
 def summary(name):
     summary = Format(generate_summary(name))
+
+    #return htmlsummary
     return render_template('summary.html',summary=summary,name=name)
 
 @app.route('/legal/<name>')
