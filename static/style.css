@@ -29,7 +29,12 @@ p {
 }
 
 /* Landing Text BODY Code */
-
+.con1{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .con1 h2{
     font-size: 2.7rem;
     line-height: 1.2;
@@ -38,20 +43,24 @@ p {
 }
 .con1 p{
   font-size: 1.2rem;
-  padding: 20px 0 40px;
   width: 75%;
+}
+
+.BtnCon{
+    display: flex;
+    align-items: flex-end;
 }
 
 .aCon1{
   font-family: 'Averia Serif Libre', cursive;
-  border: 2px solid #333;
-  padding: 15px 40px;
+  padding: 13px 35px;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
   background: #00FF00;
-  margin: 20px 0;
+  margin-right: 15px;
+  box-shadow: hsla(210, 40%, 52%, .4) 2px 2px 22px;
 }
 
 i{

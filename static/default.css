@@ -52,6 +52,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform .2s ease-out;
+  margin-left: 4.5vw;
 }
 .imageSearch input:hover + label,
 .imageSearch input:focus + label {
@@ -100,11 +101,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #00FF00;
 }
 
 input:focus +  .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #00FF00;
 }
 
 input:checked + .slider:before {
@@ -121,8 +122,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-
 /*............Design End........... */
 
 /* KeyFrames for loader spiner*/

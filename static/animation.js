@@ -28,6 +28,7 @@ function disBtn(){
   $('.buttons').addClass("ocupEffect");
   $('.pCon1').addClass("ocupEffect");
   $('.aCon1').addClass("ocupEffect");
+  $('form').addClass("ocupEffect");
 }
 
 //Icon Animation
