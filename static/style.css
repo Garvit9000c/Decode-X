@@ -10,20 +10,22 @@ html{
 }
 body {
     overflow-x: hidden;
-  font-family: 'Josefin Sans', sans-serif;
-  height: 150vh;
-  color: #444;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 150vh;
+    color: #444;
 }
+
+
 p {
-  font-family: 'Averia Serif Libre', cursive;
-  color: rgb(152, 151, 151);
-  line-height: 1.5;
+    font-family: 'Averia Serif Libre', cursive;
+    color: rgb(152, 151, 151);
+    line-height: 1.5;
 }
 
 
 /* Landing Body Code */
 .lanBody{
-    padding: 15vh 5%;
+    margin: 15vh 5%;
 }
 
 /* Landing Text BODY Code */
@@ -111,4 +113,8 @@ form{
     padding: 10px 20px;
     font-weight: 100;
     color: #9E9C97;
+}
+
+.formBtn{
+
 }
