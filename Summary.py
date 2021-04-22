@@ -95,7 +95,7 @@ def Format(Sum):
     string=''
     count=1
     for i in Sum:
-        w=str(count)+'.'+i+'.'
+        w=str(count)+'.'+i+'.<br><br>'
         string+=w
         count+=1
     return string
