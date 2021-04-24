@@ -17,4 +17,40 @@ p {
     font-family: 'Averia Serif Libre', cursive;
     color: rgb(152, 151, 151);
     line-height: 1.5;
+    font-size: 1.1rem;
+    margin: 8vh 0 0;
+}
+
+h2{
+    font-size: 2.4rem;
+    color: #333;
+}
+
+.txtBody{
+    margin: 15vh 5%;
+}
+
+.lgPerCon, .sumOriCon{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 15vh;
+}
+
+.sumTxt, .oriTxt{
+    width: 40%;
+}
+
+.lgTxt{
+    width: 60%;
+}
+
+/*PieChart Style*/
+.perChart p{
+    display: none;
+}
+
+#pieChartCon{
+    height: 50vh;
+    position: sticky;
+    top: 10vh;
 }

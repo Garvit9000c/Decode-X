@@ -42,19 +42,30 @@
         </header>
 
         <div class="txtBody">
-            <div class="lgPerCon">
-                <h2>Legal</h2>
-                <p>{% autoescape false %}{{legal}}{% endautoescape %}</p>
 
-                <h2>Percentage Risk</h2>
-                <p>{{per}}</p>
+            <div class="lgPerCon">
+                <div class="lgTxt">
+                    <h2>Legal</h2>
+                    <p>{% autoescape false %}{{legal}}{% endautoescape %}</p>
+                </div>
+                <div class="perChart">
+                    <h2>Percentage Risk</h2>
+                    <p class="perValue">{{per}}</p>
+                    <div id="pieChartCon"></div>
+                </div>
             </div>
 
-            <h2>Original Text</h2>
-            <p><{% autoescape false %}{{name}}{% endautoescape %}</p>
+            <div class="sumOriCon">
+                <div class="sumTxt">
+                    <h2>Summarised Text</h2>
+                    <p>{% autoescape false %}{{summary}}{% endautoescape %}</p>
+                </div>
+                <div class="oriTxt">
+                    <h2>Original Text</h2>
+                    <p>{% autoescape false %}{{name}}{% endautoescape %}</p>
+                </div>
+            </div>
 
-            <h2>Summarised Text</h2>
-            <p>{% autoescape false %}{{summary}}{% endautoescape %}</p>
         </div>
 
         <!--GSAP Btn-->
@@ -99,10 +110,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
 
+        <!--PieChart Scripts-->
+        <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+        <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
 
         <!--Local Scripts-->
         <script src="{{ url_for('static', filename='scripts/redirectPageScript.js') }}"></script>
         <script src="{{ url_for('static', filename='scripts/loader.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/legalScript.js') }}"></script>
 
     </body>
 </html>
