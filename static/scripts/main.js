@@ -9,6 +9,15 @@ const optionHead1 = $(".optionHead1");
 const optionHead2 = $(".optionHead2");
 const optionHead3 = $(".optionHead3");
 
+if(modeCheck.is(":checked")){
+    optionHead2.html('Hindi');
+}else{
+    optionHead2.html('English')
+}
+if (langCheck.is(":checked")){
+   optionHead3.html('Summary');
+}
+
 inputCheck.click(()=>{
     if(inputCheck.is(":checked")){
         textSearch.css('display', 'none');
