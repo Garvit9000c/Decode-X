@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <!--Meta Declaration-->
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Meta Declaration-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-            <!--Google Fonts-->
-            <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Balsamiq+Sans:wght@700&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Balsamiq+Sans:wght@700&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
         
-            <!--Bootstrap CDN-->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!--Bootstrap CDN-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         
-            <!-- Font Awesome CDN -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-            integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
-            crossorigin="anonymous" />
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+        crossorigin="anonymous" />
 
-            <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" type="text/css">
-            <link href="{{ url_for('static', filename='styles/summaryStyle.css') }}" rel="stylesheet" type="text/css">
-            <link href="{{ url_for('static', filename='styles/loader.css') }}" rel="stylesheet" type="text/css">
+
+        <link href="{{ url_for('static', filename='styles/header.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='styles/summaryStyle.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='styles/loader.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='styles/gsapBtn.css') }}" rel="stylesheet" type="text/css">
 
         
         <title>Summary | DECODE-X</title>
@@ -51,6 +53,7 @@
         </div>
 
 
+        <!--GSAP Btn-->
         <div class="btnCon">
             <div class="btnC">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
@@ -93,7 +96,7 @@
 
         <!--Local Scripts-->
         <script src="{{ url_for('static', filename='scripts/header.js') }}"></script>
-        <script src="{{ url_for('static', filename='scripts/summaryScript.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/redirectPageScript.js') }}"></script>
         <script src="{{ url_for('static', filename='scripts/loader.js') }}"></script>
 
 
