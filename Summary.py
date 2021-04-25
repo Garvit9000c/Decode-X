@@ -6,7 +6,9 @@ from nltk.cluster.util import cosine_distance
 import numpy as np
 import networkx as nx
 import math
-
+import joblib
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import LogisticRegression
 
 def read_article(a):
     if a[-1]!='.':
@@ -101,4 +103,11 @@ def Format(Sum):
     return string
     
 def legal(sentence):
-    return True
+    with open('./asset/vectorizer.joblib','rb') as f:
+        encoder=joblib.load(f)
+    with open('./asset/classifier.joblib','rb') as f:
+        model=joblib.load(f)
+    t=encoder.transform([sentence])
+    if int(model.predict(t))==1:
+        return True
+    return False
