@@ -10,7 +10,6 @@ html{
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
-    height: 150vh;
     color: #444;
 }
 
@@ -36,7 +35,7 @@ p {
   align-items: center;
 }
 
-.spiner {
+.spinner {
   border: 12px solid #f3f3f3;
   border-radius: 50%;
   border-top: 12px solid #00FF00;
