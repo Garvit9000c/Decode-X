@@ -1,7 +1,7 @@
 //TypeWrite Animation script
 var i = 0;
-var txt = 'Get Your Documents Summaries for better Understanding.'; /* The text */
-var speed = 30; /* The speed/duration of the effect in milliseconds */
+var txt = 'Now! Never Accept those Gigantic Terms & Conditions Blindly! & Quick Article Summarisation!'; /* The text */
+var speed = 20; /* The speed/duration of the effect in milliseconds */
 
 //function to give typing animation
 function typeWriter() {
