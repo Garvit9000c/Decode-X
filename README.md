@@ -23,4 +23,4 @@
 - ML Models: **Python**
 ---
 ## PROJECTED STRUCTURE:
-![Structure](https://github.com/Garvit9000c/Dart9000/raw/main/asset/Flowchart.jpg)
+![Structure](https://github.com/Garvit9000c/CS100/raw/main/Flowchart.jpg)
