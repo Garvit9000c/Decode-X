@@ -1,6 +1,6 @@
 /*Responsive Home Body*/
 @media screen and (max-width: 1105px){
-    .lanBody {
+    .lanBody, hiws{
         margin-left: 4%;
         margin-right: 4%;
     }
@@ -40,6 +40,43 @@
     .con2{
         margin-top: 20vh;
     }
+
+    /*How it Works Section*/
+    .hiws {
+        padding-top: 10%;
+    }
+
+    .feat-card-container {
+        margin: 8vh 0;
+     }
+
+    .index-num {
+        margin-right: 0;
+    }
+
+    .index-num-container {
+        background-color: #FFF0EC;
+        border-radius: 50px 0 0 50px;
+    }
+
+    .feat-card {
+        padding: 30px 0;
+        width: 70%;
+        margin: auto;
+    }
+
+    .feat-content h3 {
+        justify-content: center;
+        background-color: #FFF0EC;
+    }
+    .feat-content h3 {
+        font-size: 1rem;
+    }
+
+    .feat-content p {
+        width: 75%;
+    }
+
 }
 
 @media screen and (max-width: 652px){
@@ -72,6 +109,21 @@
     .con1 p{
         font-size: 1rem;
     }
+
+    /*How it Works Section*/
+     .feat-card {
+        width: 100%;
+    }
+
+    .feat-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .feat-content p {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
 }
 
 @media screen and (max-width: 430px){
@@ -119,4 +171,14 @@
         margin: 2vh 0;
     }
 
+    /*How it Works Section*/
+    .feat-content h3 {
+        font-size: 0.85rem;
+        height: 32px;
+    }
+
+  .index-num {
+    width: 48px;
+    height: 32px;
+  }
 }

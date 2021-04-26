@@ -34,8 +34,13 @@
   font-weight: bold;
   border-radius: 5px;
   background: #00FF00;
+  color: #444;
   margin-right: 15px;
   box-shadow: hsla(210, 40%, 52%, .4) 2px 2px 22px;
+}
+.aCon1:hover{
+  text-decoration: none;
+  color: #444;
 }
 
 i{
@@ -96,4 +101,50 @@ form{
     padding: 10px 20px;
     font-weight: 100;
     color: #9E9C97;
+}
+
+/*How it Works Section*/
+iframe{
+    width: 90%;
+}
+
+.hiws {
+  background-color: rgb(251, 251, 251);
+  padding: 20vh 5%;
+  overflow-x: hidden;
+}
+
+.feat-card-container h2, .vidSec h2{
+    font-size: 2em;
+    margin-bottom: 8vh;
+}
+
+.feat-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.index-num {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: center;
+  background-color: #00FF00;
+  color: #ffffff;
+  height: 40px;
+  width: 60px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.feat-content h3 {
+  font-size: 1.2rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.feat-content p {
+  font-size: 0.9rem;
+  width: 65%;
 }
