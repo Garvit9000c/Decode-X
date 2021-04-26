@@ -36,14 +36,20 @@ def get_data():
                         text=Simplifier(text)
                         if flag:
                                 text=English(text)
+                s2=os.path.join(app.config['UPLOAD_FOLDER'], 'name.txt')
+                with open(s2,'w') as f:
+                    f.write(text)     
                 if request.form.get('type'):
-                    return redirect(url_for('legal', name=text))
+                    return redirect(url_for('legal', name='Processing'))
                 else:
-                    return redirect(url_for('summary', name=text))
+                    return redirect(url_for('summary', name='Processing'))
 
 
 @app.route('/summary/<name>')
 def summary(name):
+    s2=os.path.join(app.config['UPLOAD_FOLDER'], 'name.txt')
+    with open(s2,'r') as f:
+        name=f.read()     
     summary = Format(generate_summary(name))
 
     #return htmlsummary
@@ -51,6 +57,9 @@ def summary(name):
 
 @app.route('/legal/<name>')
 def legal(name):
+    s2=os.path.join(app.config['UPLOAD_FOLDER'], 'name.txt')
+    with open(s2,'r') as f:
+        name=f.read()
     summary= generate_summary(name)
     legal= generate_legal(summary)
     per=(len(legal)/len(summary))*100
