@@ -90,6 +90,8 @@ def generate_legal(Sentence_list):
     for i in Sentence_list:
         if legal(i):
             Sentence_list_legal+=[i]
+    if Sentence_list_legal==[]:
+    	Sentence_list_legal+=['The Document Is Safe']
     return Sentence_list_legal
 
    
