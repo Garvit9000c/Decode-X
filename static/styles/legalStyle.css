@@ -124,6 +124,9 @@ h2{
     p{
         font-size: 0.9rem;
     }
+    #pieChartCon{
+        height: 35vh;
+    }
     .oriBtn, .sumBtn{
         font-size: 10px;
     }
