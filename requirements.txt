@@ -8,3 +8,4 @@ flask
 gunicorn
 joblib
 dill
+sklearn
