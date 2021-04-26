@@ -17,7 +17,7 @@
 7. CI/CD Pipeline
 ---
 ## EXPECTED TECH-STACK
-- Front End: **HTML/CSS/JS**
+- Front End: **HTML/CSS/ Bootstrap/JavaScript/jQuery/GSAP**
 - Backend End: **Flask**
 - Deploymwnt: **Heroku**
 - ML Models: **Python**
