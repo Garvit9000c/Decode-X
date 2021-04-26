@@ -1,3 +1,21 @@
+//SumBtn Dynamic Display
+const sumBtn = $(".sumBtn");
+const sumTxt  = $(".sumTxtP");
+
+let si = 1;
+sumBtn.click( ()=>{
+    sumTxt.toggleClass("dis");
+
+    if(si%2 == 0){
+        sumBtn.html("Show Text");
+    }else{
+        sumTxt.css("margin-bottom", "0");
+        sumBtn.html("Hide Text");
+    }
+
+    si++;
+});
+
 var perValue = Number($('.perValue').html());
 
 anychart.onDocumentReady(function() {

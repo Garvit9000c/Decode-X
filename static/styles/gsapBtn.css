@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vh;
+    margin: 0 5% 5vh;
 }
 
 .btnC {
@@ -23,7 +23,7 @@
 	 user-select: none;
 	 letter-spacing: 1px;
 	 color: white;
-	 padding: 20px 40px;
+	 padding: 18px 36px;
 	 text-transform: uppercase;
 	 transition: all 0.1s ease-out;
 }
@@ -119,5 +119,18 @@
 		-moz-filter: hue-rotate(360deg);
 	    -ms-filter: hue-rotate(360deg);
 		filter: hue-rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 745px){
+    .btnCon{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .button{
+        font-size: 12px;
+        padding: 10px 20px;
     }
 }

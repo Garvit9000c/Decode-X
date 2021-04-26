@@ -59,11 +59,13 @@
             <div class="sumOriCon">
                 <div class="sumTxt">
                     <h2>Summarised Text</h2>
-                    <p>{% autoescape false %}{{summary}}{% endautoescape %}</p>
+                    <p class="sumTxtP">{% autoescape false %}{{summary}}{% endautoescape %}</p>
+                    <button class="sumBtn">Show Text</button>
                 </div>
                 <div class="oriTxt">
                     <h2>Original Text</h2>
-                    <p>{% autoescape false %}{{name}}{% endautoescape %}</p>
+                    <p class="oriTxtP">{% autoescape false %}{{name}}{% endautoescape %}</p>
+                    <button class="oriBtn">Show Text</button>
                 </div>
             </div>
 
