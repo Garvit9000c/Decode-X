@@ -19,7 +19,7 @@
 ## EXPECTED TECH-STACK
 - Front End: **HTML/CSS/ Bootstrap/JavaScript/jQuery/GSAP**
 - Backend End: **Flask**
-- Deploymwnt: **Heroku**
+- Deployment: **Heroku**
 - ML Models: **Python**
 ---
 ## PROJECTED STRUCTURE:
