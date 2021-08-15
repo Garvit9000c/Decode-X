@@ -22,5 +22,8 @@
 - Deployment: **Heroku**
 - ML Models: **Python**
 ---
+## TRY-IT-OUT
+[Decode-X](https://decode-x.herokuapp.com/)
+---
 ## PROJECTED STRUCTURE:
 ![Structure](https://github.com/Garvit9000c/CS100/raw/main/Flowchart.jpg)
